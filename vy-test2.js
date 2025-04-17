@@ -12,4 +12,5 @@ function testVy_Function2(){
     console.log("Function 2.2 ne!")
     console.log("Function 2.3 ne!")
     console.log("Function 2.4 ne!")
+    console.log("Function 2.5 ne!")
 }
