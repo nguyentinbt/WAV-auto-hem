@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-28T20:01:50.956974" rpa="false" schemaversion="5">
+<suite id="s1" name="Tu Test On Browser" source="d:\WAV-auto-hem\tu_test_on_browser.robot">
+<test id="s1-t1" name="Open Web Browser and Input credentials to login" line="11">
+<kw name="Open Chrome Browser" owner="hook">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-28T20:01:51.183896" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-28T20:01:51.183598" elapsed="4.868352"/>
+</kw>
+<status status="PASS" start="2025-04-28T20:01:51.182938" elapsed="4.869238"/>
+</kw>
+<kw name="Input credentials" owner="hook">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T20:01:56.053452" level="INFO">Typing text 'admin' into text field '//*[@id="username"]'.</msg>
+<arg>//*[@id="username"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T20:01:56.053067" elapsed="0.078135"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-28T20:01:56.131710" level="INFO">Typing text 'password123' into text field '//*[@id="password"]'.</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T20:01:56.131436" elapsed="0.068574"/>
+</kw>
+<status status="PASS" start="2025-04-28T20:01:56.052649" elapsed="0.147549"/>
+</kw>
+<kw name="Click on Login button" owner="hook">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-04-28T20:01:56.201024" level="INFO">Clicking button '//*[@id="login"]/button'.</msg>
+<arg>//*[@id="login"]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-28T20:01:56.200823" elapsed="0.064158"/>
+</kw>
+<status status="PASS" start="2025-04-28T20:01:56.200535" elapsed="0.064633"/>
+</kw>
+<status status="PASS" start="2025-04-28T20:01:51.182246" elapsed="5.083270"/>
+</test>
+<status status="PASS" start="2025-04-28T20:01:50.959909" elapsed="5.306462"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tu Test On Browser" id="s1" pass="1" fail="0" skip="0">Tu Test On Browser</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
