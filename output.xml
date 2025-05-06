@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-06T08:50:44.113384" rpa="false" schemaversion="5">
+<suite id="s1" name="Vy Test Login" source="d:\vy.phan\Demo_Auto\WAV-auto-hem\vy_test_login.robot">
+<test id="s1-t1" name="Open Web Browser and Input username &amp; password to login" line="7">
+<kw name="Open Chrome Browser" owner="vy_test">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-06T08:50:44.679291" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER_NAME}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-06T08:50:44.676769" elapsed="6.444538"/>
+</kw>
+<status status="PASS" start="2025-05-06T08:50:44.672173" elapsed="6.450177"/>
+</kw>
+<kw name="Input username&amp;password" owner="vy_test">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T08:50:51.127923" level="INFO">Typing text 'tomsmith' into text field '//*[@id="username"]'.</msg>
+<arg>//*[@id="username"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T08:50:51.125764" elapsed="0.172457"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-06T08:50:51.300025" level="INFO">Typing text 'SuperSecretPassword!' into text field '//*[@id="password"]'.</msg>
+<arg>//*[@id="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T08:50:51.298980" elapsed="0.128816"/>
+</kw>
+<status status="PASS" start="2025-05-06T08:50:51.124007" elapsed="0.304292"/>
+</kw>
+<kw name="Click on Login button" owner="vy_test">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-06T08:50:51.431125" level="INFO">Clicking button '//*[@id="login"]/button'.</msg>
+<arg>//*[@id="login"]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-06T08:50:51.430372" elapsed="0.746637"/>
+</kw>
+<status status="PASS" start="2025-05-06T08:50:51.429336" elapsed="0.748241"/>
+</kw>
+<status status="PASS" start="2025-05-06T08:50:44.668798" elapsed="7.509970"/>
+</test>
+<status status="PASS" start="2025-05-06T08:50:44.124103" elapsed="8.059095"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Vy Test Login" id="s1" pass="1" fail="0" skip="0">Vy Test Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
