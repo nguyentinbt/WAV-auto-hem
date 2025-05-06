@@ -4,16 +4,13 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}    https://the-internet.herokuapp.com/login
 ${BROWSER_NAME}    chrome
-${USERNAME}    admin
-${PASSWORD}    password123
+${USERNAME}    tomsmith
+${PASSWORD}    SuperSecretPassword!
 
 *** Keywords ***
-Open Chrome Browser
-    Open Browser    ${URL}    ${BROWSER_NAME}  
-
-Input credentials
-    Input Text    //*[@id="username"]    ${USERNAME}
-    Input Text    //*[@id="password"]    ${PASSWORD} 
-
-Click on Login button
-    Click Button    //*[@id="login"]/button 
+Login With Flexible Locators
+    [Documentation]    This function is for logging in 
+    [Arguments]    ${username_locator}    ${password_locator}    ${button_locator}    ${username}    ${password}
+    Input Text     ${username_locator}    ${username}
+    Input Text     ${password_locator}    ${password}
+    Click Button   ${button_locator}

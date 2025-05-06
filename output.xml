@@ -1,46 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-04-28T20:01:50.956974" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-05T20:11:46.837252" rpa="false" schemaversion="5">
 <suite id="s1" name="Tu Test On Browser" source="d:\WAV-auto-hem\tu_test_on_browser.robot">
-<test id="s1-t1" name="Open Web Browser and Input credentials to login" line="11">
-<kw name="Open Chrome Browser" owner="hook">
+<test id="s1-t1" name="Flexible Login Test" line="7">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-04-28T20:01:51.183896" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2025-05-05T20:11:47.386267" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
 <arg>${URL}</arg>
-<arg>${BROWSER_NAME}</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-04-28T20:01:51.183598" elapsed="4.868352"/>
+<status status="PASS" start="2025-05-05T20:11:47.384600" elapsed="4.766766"/>
 </kw>
-<status status="PASS" start="2025-04-28T20:01:51.182938" elapsed="4.869238"/>
-</kw>
-<kw name="Input credentials" owner="hook">
+<kw name="Login With Flexible Locators" owner="hook">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T20:01:56.053452" level="INFO">Typing text 'admin' into text field '//*[@id="username"]'.</msg>
-<arg>//*[@id="username"]</arg>
-<arg>${USERNAME}</arg>
+<msg time="2025-05-05T20:11:57.312306" level="INFO">Typing text 'tomsmith' into text field '//*[@id="username"]'.</msg>
+<arg>${username_locator}</arg>
+<arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T20:01:56.053067" elapsed="0.078135"/>
+<status status="PASS" start="2025-05-05T20:11:52.154827" elapsed="5.235300"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-04-28T20:01:56.131710" level="INFO">Typing text 'password123' into text field '//*[@id="password"]'.</msg>
-<arg>//*[@id="password"]</arg>
-<arg>${PASSWORD}</arg>
+<msg time="2025-05-05T20:11:57.391854" level="INFO">Typing text 'SuperSecretPassword!' into text field '//*[@id="password"]'.</msg>
+<arg>${password_locator}</arg>
+<arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T20:01:56.131436" elapsed="0.068574"/>
+<status status="PASS" start="2025-05-05T20:11:57.390758" elapsed="0.061926"/>
 </kw>
-<status status="PASS" start="2025-04-28T20:01:56.052649" elapsed="0.147549"/>
-</kw>
-<kw name="Click on Login button" owner="hook">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-04-28T20:01:56.201024" level="INFO">Clicking button '//*[@id="login"]/button'.</msg>
-<arg>//*[@id="login"]/button</arg>
+<msg time="2025-05-05T20:11:57.454214" level="INFO">Clicking button '//*[@id="login"]/button'.</msg>
+<arg>${button_locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-04-28T20:01:56.200823" elapsed="0.064158"/>
+<status status="PASS" start="2025-05-05T20:11:57.453367" elapsed="0.067566"/>
 </kw>
-<status status="PASS" start="2025-04-28T20:01:56.200535" elapsed="0.064633"/>
+<arg>//*[@id="username"]</arg>
+<arg>//*[@id="password"]</arg>
+<arg>//*[@id="login"]/button</arg>
+<arg>tomsmith</arg>
+<arg>SuperSecretPassword!</arg>
+<doc>This function is for logging in</doc>
+<status status="PASS" start="2025-05-05T20:11:52.152981" elapsed="5.368512"/>
 </kw>
-<status status="PASS" start="2025-04-28T20:01:51.182246" elapsed="5.083270"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-05T20:12:07.523700" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-05T20:11:57.522560" elapsed="10.001671"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2025-05-05T20:12:20.483075" level="INFO">${TEXT} = Welcome to the Secure Area. When you are done click logout below.</msg>
+<var>${TEXT}</var>
+<arg>//*[@id="content"]/div/h4</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-05T20:12:07.525402" elapsed="12.958090"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${TEXT}</arg>
+<arg>Welcome</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-05-05T20:12:20.484832" elapsed="26.774635"/>
+</kw>
+<status status="PASS" start="2025-05-05T20:11:47.380440" elapsed="59.880626"/>
 </test>
-<status status="PASS" start="2025-04-28T20:01:50.959909" elapsed="5.306462"/>
+<status status="PASS" start="2025-05-05T20:11:46.845766" elapsed="60.418843"/>
 </suite>
 <statistics>
 <total>

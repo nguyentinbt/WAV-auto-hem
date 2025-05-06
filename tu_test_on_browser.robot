@@ -4,7 +4,14 @@ Resource    hook.resource
 
 
 *** Test Cases ***
-Open Web Browser and Input credentials to login
-    Open Chrome Browser
-    Input credentials
-    Click on Login button
+Flexible Login Test 
+    Open Browser    ${URL}    chrome
+    Login With Flexible Locators
+    ...    //*[@id="username"]
+    ...    //*[@id="password"]
+    ...    //*[@id="login"]/button
+    ...    tomsmith
+    ...    SuperSecretPassword!
+    Sleep    10s
+    ${TEXT}=    Get Text    //*[@id="content"]/div/h4
+    Should Contain    ${TEXT}    Welcome    
