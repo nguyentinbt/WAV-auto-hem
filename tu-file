@@ -1,3 +1,0 @@
-function testNewFile(){
-    console.log("Say Hi 123");
-}
