@@ -1,6 +1,6 @@
 *** Settings ***
 Library           SeleniumLibrary
-Resource    hook.resource
+Resource    ../tu_resource/hook.resource
 
 *** Variables ***
 ${USERNAME_LOCATOR}    //*[@id="username"]
