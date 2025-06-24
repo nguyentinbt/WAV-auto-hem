@@ -87,6 +87,7 @@ Select City
     [Documentation]    This function is for selecting city
     Click Element    ${SELECT_CITY_DROPDOWN}
     Click Element   xpath=//div[text()="Karnal"]
+    
 Select Date
     [Documentation]    Select Date From Custom Calendar
     Click Element    ${DATE_OF_BIRTH_FIELD}
@@ -156,3 +157,24 @@ Verify Address
 Verify State And City
     [Arguments]    ${state_city}
     Page Should Contain    ${state_city}
+
+Verify that the required fields will be red-highlighted
+    @{fields}=    Create List    firstName    lastName    userNumber    
+    # Get border color of the field
+    FOR    ${id}    IN    @{fields}
+        ${border}=    Execute Javascript    return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color')
+        Log    Border Color: ${border}
+        Should Be Equal As Strings    ${border}    rgb(220, 53, 69)
+    END
+
+Verify that the required radios will be red-highlighted
+    @{gender_labels}=    Create List
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label
+    # Get border color of the radio
+    FOR    ${label_selector}    IN    @{gender_labels}
+        ${border}=    Execute Javascript    return window.getComputedStyle(document.querySelector('#${label_selector}')).getPropertyValue('color')
+        Log    Border Color: ${border}
+        Should Be Equal As Strings    ${border}    rgb(220, 53, 69)
+    END
