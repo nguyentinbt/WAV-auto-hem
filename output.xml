@@ -1,377 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-06-09T21:03:54.961663" rpa="false" schemaversion="5">
-<suite id="s1" name="Tu Test1" source="d:\WAV-auto-hem\tu_tests\tu_test1.robot">
-<test id="s1-t1" name="Verify showing confirmation popup with provided data" line="20">
-<kw name="Open Practice Form" owner="test1">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-06-23T20:19:15.611296" rpa="false" schemaversion="5">
+<suite id="s1" name="Practice Form2" source="d:\WAV-auto-hem\tu_tests\practice_form2.robot">
+<test id="s1-t1" name="Check Red Highlight Fields" line="8">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:03:55.203394" level="INFO">Opening browser 'chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
-<arg>${DEMOQA_URL}</arg>
-<arg>chrome</arg>
+<msg time="2025-06-23T20:19:15.865177" level="INFO">Opening browser 'Chrome' to base url 'https://demoqa.com/automation-practice-form'.</msg>
+<arg>https://demoqa.com/automation-practice-form</arg>
+<arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-06-09T21:03:55.203121" elapsed="7.027557"/>
+<status status="PASS" start="2025-06-23T20:19:15.864889" elapsed="5.584762"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.230951" elapsed="0.026507"/>
+<status status="PASS" start="2025-06-23T20:19:21.450183" elapsed="0.031935"/>
 </kw>
-<doc>This function is for opening the website</doc>
-<status status="PASS" start="2025-06-09T21:03:55.202429" elapsed="7.055288"/>
-</kw>
-<kw name="Input Name" owner="test1">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.259255" level="INFO">Typing text 'Tu' into text field '//*[@id="firstName"]'.</msg>
-<arg>${FIRST_NAME_FIELD}</arg>
-<arg>${first_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.258765" elapsed="0.121909"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.381172" level="INFO">Typing text 'Ha' into text field '//*[@id="lastName"]'.</msg>
-<arg>${LAST_NAME_FIELD}</arg>
-<arg>${last_name}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.380898" elapsed="0.048208"/>
-</kw>
-<arg>${FIRST_NAME}</arg>
-<arg>${LAST_NAME}</arg>
-<doc>This function is for inputting name</doc>
-<status status="PASS" start="2025-06-09T21:04:02.258234" elapsed="0.171055"/>
-</kw>
-<kw name="Input Email" owner="test1">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.430242" level="INFO">Typing text 'minhtu11598@gmail.com' into text field '//*[@id="userEmail"]'.</msg>
-<arg>${EMAIL_FIELD}</arg>
-<arg>${email}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.429998" elapsed="0.094493"/>
-</kw>
-<arg>${EMAIL}</arg>
-<doc>This function is for inputting email</doc>
-<status status="PASS" start="2025-06-09T21:04:02.429651" elapsed="0.095012"/>
-</kw>
-<kw name="Select Gender" owner="test1">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.525620" level="INFO">Clicking element '//label[contains(text(), 'Female')]'.</msg>
-<arg>${FEMALE_GENDER_OPTION}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.525390" elapsed="0.066640"/>
-</kw>
-<doc>This function is for selecting gender</doc>
-<status status="PASS" start="2025-06-09T21:04:02.525082" elapsed="0.067122"/>
-</kw>
-<kw name="Input Mobile" owner="test1">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.593179" level="INFO">Typing text '0909090909' into text field '//*[@id="userNumber"]'.</msg>
-<arg>${MOBILE_FIELD}</arg>
-<arg>${mobile}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.592926" elapsed="0.066401"/>
-</kw>
-<arg>${MOBILE}</arg>
-<doc>This function is for inputting mobile</doc>
-<status status="PASS" start="2025-06-09T21:04:02.592570" elapsed="0.066927"/>
-</kw>
-<kw name="Scroll To The End Of The Page" owner="test1">
+<kw name="Scroll To The End Of The Page" owner="practice_form">
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${LAST_PAGE_ELEMENT}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.660116" elapsed="0.299825"/>
+<status status="PASS" start="2025-06-23T20:19:21.483202" elapsed="0.302813"/>
 </kw>
 <doc>This function is for scrolling to the end of the page</doc>
-<status status="PASS" start="2025-06-09T21:04:02.659834" elapsed="0.300283"/>
+<status status="PASS" start="2025-06-23T20:19:21.482801" elapsed="0.303393"/>
 </kw>
-<kw name="Input Subject" owner="test1">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:02.961155" level="INFO">Typing text 'English' into text field '//*[@id="subjectsInput"]'.</msg>
-<arg>${SUBJECT_FIELD}</arg>
-<arg>${subject}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:02.960905" elapsed="0.077332"/>
-</kw>
-<kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.038874" level="INFO">Sending key(s) ('RETURN',) to //*[@id="subjectsInput"] element.</msg>
-<msg time="2025-06-09T21:04:03.359002" level="INFO">Pressing special key RETURN to element.</msg>
-<msg time="2025-06-09T21:04:03.359190" level="INFO">Releasing special key RETURN.</msg>
-<arg>${SUBJECT_FIELD}</arg>
-<arg>RETURN</arg>
-<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.038479" elapsed="0.333059"/>
-</kw>
-<arg>${SUBJECT}</arg>
-<doc>This function is for inputting subject</doc>
-<status status="PASS" start="2025-06-09T21:04:02.960550" elapsed="0.411157"/>
-</kw>
-<kw name="Select Hobbies" owner="test1">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.372608" level="INFO">Clicking element '//label[contains(text(), 'Music')]'.</msg>
-<arg>${MUSIC_HOBBIES_OPTION}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.372390" elapsed="0.049908"/>
-</kw>
-<doc>This function is for selecting hobbies</doc>
-<status status="PASS" start="2025-06-09T21:04:03.372085" elapsed="0.050548"/>
-</kw>
-<kw name="Select Picture" owner="test1">
-<kw name="Get file path" owner="test1">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-06-09T21:04:03.425843" level="INFO">${raw_path} = d:\WAV-auto-hem\tu_resource\..\tu_test_data\picture.jpg</msg>
-<var>${raw_path}</var>
-<arg>d:\\WAV-auto-hem\\tu_resource\\..\\tu_test_data\\${filename}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.425136" elapsed="0.000994"/>
-</kw>
-<kw name="Normalize Path" owner="OperatingSystem">
-<msg time="2025-06-09T21:04:03.426945" level="INFO">${file_path} = d:\WAV-auto-hem\tu_test_data\picture.jpg</msg>
-<var>${file_path}</var>
-<arg>${raw_path}</arg>
-<doc>Normalizes the given path.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.426467" elapsed="0.000750"/>
-</kw>
-<return>
-<value>${file_path}</value>
-<status status="PASS" start="2025-06-09T21:04:03.427426" elapsed="0.000217"/>
-</return>
-<msg time="2025-06-09T21:04:03.428049" level="INFO">${file_path} = d:\WAV-auto-hem\tu_test_data\picture.jpg</msg>
-<var>${file_path}</var>
-<arg>picture.jpg</arg>
-<doc>Get file path of the picture</doc>
-<status status="PASS" start="2025-06-09T21:04:03.423826" elapsed="0.004414"/>
-</kw>
-<kw name="Choose File" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.428949" level="INFO">Sending d:\WAV-auto-hem\tu_test_data\picture.jpg to browser.</msg>
-<arg>${UPLOAD_PICTURE_BUTTON}</arg>
-<arg>${file_path}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.428511" elapsed="0.033946"/>
-</kw>
-<doc>This function is for selecting picture</doc>
-<status status="PASS" start="2025-06-09T21:04:03.423360" elapsed="0.039268"/>
-</kw>
-<kw name="Input Address" owner="test1">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.463912" level="INFO">Typing text 'abcxyz' into text field '//*[@id="currentAddress"]'.</msg>
-<arg>${CURRENT_ADDRESS_FIELD}</arg>
-<arg>${address}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.463672" elapsed="0.077436"/>
-</kw>
-<arg>${CURRENT_ADDRESS}</arg>
-<doc>This function is for inputting address</doc>
-<status status="PASS" start="2025-06-09T21:04:03.463342" elapsed="0.078044"/>
-</kw>
-<kw name="Select State" owner="test1">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.542274" level="INFO">Clicking element '//*[@id="state"]'.</msg>
-<arg>${SELECT_STATE_DROPDOWN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.542058" elapsed="0.082818"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.625331" level="INFO">Clicking element 'xpath=//div[text()="Haryana"]'.</msg>
-<arg>xpath=//div[text()="Haryana"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.625110" elapsed="0.061357"/>
-</kw>
-<doc>This function is for selecting state</doc>
-<status status="PASS" start="2025-06-09T21:04:03.541775" elapsed="0.144863"/>
-</kw>
-<kw name="Select City" owner="test1">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.687708" level="INFO">Clicking element '//*[@id="city"]'.</msg>
-<arg>${SELECT_CITY_DROPDOWN}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.687495" elapsed="0.057506"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.745456" level="INFO">Clicking element 'xpath=//div[text()="Karnal"]'.</msg>
-<arg>xpath=//div[text()="Karnal"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.745227" elapsed="0.050627"/>
-</kw>
-<doc>This function is for selecting city</doc>
-<status status="PASS" start="2025-06-09T21:04:03.687209" elapsed="0.108814"/>
-</kw>
-<kw name="Select Date" owner="test1">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.797168" level="INFO">Clicking element '//*[@id="dateOfBirthInput"]'.</msg>
-<arg>${DATE_OF_BIRTH_FIELD}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.796776" elapsed="0.097987"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.895405" level="INFO">Clicking element '//select[@class='react-datepicker__month-select']//option[text()='June']'.</msg>
-<arg>//select[@class='react-datepicker__month-select']//option[text()='${MONTH}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.895121" elapsed="0.041515"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.937109" level="INFO">Clicking element '//select[@class='react-datepicker__year-select']//option[text()='2025']'.</msg>
-<arg>//select[@class='react-datepicker__year-select']//option[text()='${YEAR}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.936853" elapsed="0.022007"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:03.959311" level="INFO">Clicking element '//*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[3]'.</msg>
-<arg>${DATE}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:03.959078" elapsed="0.057619"/>
-</kw>
-<doc>Select Date From Custom Calendar</doc>
-<status status="PASS" start="2025-06-09T21:04:03.796433" elapsed="0.220548"/>
-</kw>
-<kw name="Submit Practice Form" owner="test1">
+<kw name="Submit Practice Form" owner="practice_form">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.018227" level="INFO">Clicking button '//*[@id="submit"]'.</msg>
+<msg time="2025-06-23T20:19:21.787318" level="INFO">Clicking button '//*[@id="submit"]'.</msg>
 <arg>${SUBMIT_BUTTON}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.017986" elapsed="0.072354"/>
+<status status="PASS" start="2025-06-23T20:19:21.787087" elapsed="0.110352"/>
 </kw>
 <doc>This function is for submitting form</doc>
-<status status="PASS" start="2025-06-09T21:04:04.017608" elapsed="0.072909"/>
+<status status="PASS" start="2025-06-23T20:19:21.786768" elapsed="0.110847"/>
 </kw>
-<kw name="Verify the submited form" owner="test1">
-<kw name="Verify Title" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.104502" level="INFO">Current page contains text 'Thanks for submitting the form'.</msg>
-<arg>${form_title}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.091991" elapsed="0.012720"/>
+<kw name="Verify that the required fields will be red-highlighted" owner="practice_form">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.898546" level="INFO">@{fields} = [ firstName | lastName | userNumber ]</msg>
+<var>@{fields}</var>
+<arg>firstName</arg>
+<arg>lastName</arg>
+<arg>userNumber</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.898304" elapsed="0.000354"/>
 </kw>
-<arg>${form_title}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.091673" elapsed="0.013173"/>
+<for flavor="IN">
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.899529" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#firstName')).getPropertyValue('border-color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.905545" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.899134" elapsed="0.006575"/>
 </kw>
-<kw name="Verify Name" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.119167" level="INFO">Current page contains text 'Tu'.</msg>
-<arg>${first_name}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.105422" elapsed="0.013950"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.906138" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.905908" elapsed="0.000349"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.130786" level="INFO">Current page contains text 'Ha'.</msg>
-<arg>${last_name}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.119549" elapsed="0.011443"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.906399" elapsed="0.000216"/>
 </kw>
-<arg>${first_name}</arg>
-<arg>${last_name}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.105027" elapsed="0.026092"/>
+<var name="${id}">firstName</var>
+<status status="PASS" start="2025-06-23T20:19:21.898977" elapsed="0.007731"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.907680" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#lastName')).getPropertyValue('border-color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.916395" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.907023" elapsed="0.009665"/>
 </kw>
-<kw name="Verify Email" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.142700" level="INFO">Current page contains text 'minhtu11598@gmail.com'.</msg>
-<arg>${email}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.131592" elapsed="0.011336"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.917464" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.917073" elapsed="0.000625"/>
 </kw>
-<arg>${email}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.131294" elapsed="0.011771"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.918050" elapsed="0.000887"/>
 </kw>
-<kw name="Verify Gender" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.156428" level="INFO">Current page contains text 'Female'.</msg>
-<arg>${gender}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.143566" elapsed="0.013068"/>
+<var name="${id}">lastName</var>
+<status status="PASS" start="2025-06-23T20:19:21.906879" elapsed="0.012339"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.920570" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#userNumber')).getPropertyValue('border-color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.926892" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.919895" elapsed="0.007216"/>
 </kw>
-<arg>${gender}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.143248" elapsed="0.013514"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.927769" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.927448" elapsed="0.000525"/>
 </kw>
-<kw name="Verify Mobile" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.167944" level="INFO">Current page contains text '0909090909'.</msg>
-<arg>${mobile}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.157236" elapsed="0.010906"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.928231" elapsed="0.000419"/>
 </kw>
-<arg>${mobile}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.156938" elapsed="0.011332"/>
+<var name="${id}">userNumber</var>
+<status status="PASS" start="2025-06-23T20:19:21.919544" elapsed="0.009282"/>
+</iter>
+<var>${id}</var>
+<value>@{fields}</value>
+<status status="PASS" start="2025-06-23T20:19:21.898772" elapsed="0.030241"/>
+</for>
+<status status="PASS" start="2025-06-23T20:19:21.898006" elapsed="0.031203"/>
 </kw>
-<kw name="Verify DOB" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.180382" level="INFO">Current page contains text '10 June,2025'.</msg>
-<arg>${date_of_birth}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.168741" elapsed="0.011840"/>
+<kw name="Verify that the required radios will be red-highlighted" owner="practice_form">
+<kw name="Create List" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.931086" level="INFO">@{gender_labels} = [ genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(1) &gt; label | genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(2) &gt; label | genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(3) &gt; la...</msg>
+<var>@{gender_labels}</var>
+<arg>genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(1) &gt; label</arg>
+<arg>genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(2) &gt; label</arg>
+<arg>genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(3) &gt; label</arg>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.930685" elapsed="0.000602"/>
 </kw>
-<arg>${date_of_birth}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.168437" elapsed="0.012271"/>
+<for flavor="IN">
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.932697" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(1) &gt; label')).getPropertyValue('color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.942008" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${label_selector}')).getPropertyValue('color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.932173" elapsed="0.010051"/>
 </kw>
-<kw name="Verify Subject" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.192761" level="INFO">Current page contains text 'English'.</msg>
-<arg>${subject}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.181170" elapsed="0.011792"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.943180" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.942790" elapsed="0.000628"/>
 </kw>
-<arg>${subject}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.180875" elapsed="0.012215"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.943720" elapsed="0.000417"/>
 </kw>
-<kw name="Verify Hobbies" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.204727" level="INFO">Current page contains text 'Music'.</msg>
-<arg>${hobbies}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.193556" elapsed="0.011386"/>
+<var name="${label_selector}">genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(1) &gt; label</var>
+<status status="PASS" start="2025-06-23T20:19:21.931900" elapsed="0.012432"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.945824" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(2) &gt; label')).getPropertyValue('color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.952148" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${label_selector}')).getPropertyValue('color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.945028" elapsed="0.007383"/>
 </kw>
-<arg>${hobbies}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.193260" elapsed="0.011965"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.953155" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.952805" elapsed="0.000555"/>
 </kw>
-<kw name="Verify Picture" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.216495" level="INFO">Current page contains text 'picture.jpg'.</msg>
-<arg>${picture}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.205746" elapsed="0.010950"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.953622" elapsed="0.000330"/>
 </kw>
-<arg>${picture}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.205407" elapsed="0.011416"/>
+<var name="${label_selector}">genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(2) &gt; label</var>
+<status status="PASS" start="2025-06-23T20:19:21.944660" elapsed="0.009481"/>
+</iter>
+<iter>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-06-23T20:19:21.955299" level="INFO">Executing JavaScript:
+return window.getComputedStyle(document.querySelector('#genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(3) &gt; label')).getPropertyValue('color')
+Without any arguments.</msg>
+<msg time="2025-06-23T20:19:21.961327" level="INFO">${border} = rgb(220, 53, 69)</msg>
+<var>${border}</var>
+<arg>return window.getComputedStyle(document.querySelector('#${label_selector}')).getPropertyValue('color')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.954682" elapsed="0.006832"/>
 </kw>
-<kw name="Verify Address" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.227943" level="INFO">Current page contains text 'abcxyz'.</msg>
-<arg>${address}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.217298" elapsed="0.010846"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-06-23T20:19:21.962075" level="INFO">Border Color: rgb(220, 53, 69)</msg>
+<arg>Border Color: ${border}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.961734" elapsed="0.000527"/>
 </kw>
-<arg>${address}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.216995" elapsed="0.011276"/>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${border}</arg>
+<arg>rgb(220, 53, 69)</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-06-23T20:19:21.962476" elapsed="0.000310"/>
 </kw>
-<kw name="Verify State And City" owner="test1">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2025-06-09T21:04:04.245462" level="INFO">Current page contains text 'Haryana Karnal'.</msg>
-<arg>${state_city}</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.228760" elapsed="0.016921"/>
+<var name="${label_selector}">genterWrapper &gt; div.col-md-9.col-sm-12 &gt; div:nth-child(3) &gt; label</var>
+<status status="PASS" start="2025-06-23T20:19:21.954421" elapsed="0.008483"/>
+</iter>
+<var>${label_selector}</var>
+<value>@{gender_labels}</value>
+<status status="PASS" start="2025-06-23T20:19:21.931531" elapsed="0.031493"/>
+</for>
+<status status="PASS" start="2025-06-23T20:19:21.930198" elapsed="0.032985"/>
 </kw>
-<arg>${state_city}</arg>
-<status status="PASS" start="2025-06-09T21:04:04.228444" elapsed="0.017370"/>
-</kw>
-<arg>${FORM_TITLE}</arg>
-<arg>${FIRST_NAME}</arg>
-<arg>${LAST_NAME}</arg>
-<arg>${EMAIL}</arg>
-<arg>${GENDER}</arg>
-<arg>${MOBILE}</arg>
-<arg>${DATE_OF_BIRTH}</arg>
-<arg>${SUBJECT}</arg>
-<arg>${HOBBIES}</arg>
-<arg>${PICTURE}</arg>
-<arg>${CURRENT_ADDRESS}</arg>
-<arg>${STATE_CITY}</arg>
-<doc>Verify the submited form</doc>
-<status status="PASS" start="2025-06-09T21:04:04.091040" elapsed="0.154878"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2025-06-09T21:04:09.247460" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-06-09T21:04:04.246417" elapsed="5.001534"/>
-</kw>
-<doc>This function is for submitting the Practice</doc>
-<status status="PASS" start="2025-06-09T21:03:55.201682" elapsed="14.046791"/>
+<status status="PASS" start="2025-06-23T20:19:15.863804" elapsed="6.099803"/>
 </test>
-<status status="PASS" start="2025-06-09T21:03:54.964762" elapsed="14.284922"/>
+<status status="PASS" start="2025-06-23T20:19:15.614316" elapsed="6.350623"/>
 </suite>
 <statistics>
 <total>
@@ -380,7 +233,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Tu Test1" id="s1" pass="1" fail="0" skip="0">Tu Test1</stat>
+<stat name="Practice Form2" id="s1" pass="1" fail="0" skip="0">Practice Form2</stat>
 </suite>
 </statistics>
 <errors>

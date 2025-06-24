@@ -1,6 +1,6 @@
 *** Settings ***
-Library           SeleniumLibrary
-Resource    ../tu_resource/test1.resource
+Library    SeleniumLibrary
+Resource    ../tu_resource/practice_form.resource
 
 *** Variables ***
 ${FORM_TITLE}    Thanks for submitting the form
