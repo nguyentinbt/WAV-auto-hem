@@ -22,7 +22,7 @@ ${CLOSE_BUTTON}    //button[@id="closeLargeModal"]
 
 ${PICTURE}    15.jpg 
 ${DOB}    	27 September,1997
-# ${STAGE_CITY}    NCR Delhi
+${STAGE_CITY}    NCR Delhi
 ${SUBMIT_TITLE}    Thanks for submitting the form 
 
 
@@ -69,7 +69,7 @@ Input Subjects
     [Arguments]    ${SUBJECTS}
     Scroll Element To Center    ${SUBJECTS_LOCATOR}
     Click Element    ${SUBJECTS_LOCATOR}
-    Input Text      ${SUBJECTS_LOCATOR}    ${SUBJECTS}
+    Input Text      ${SUBJECTS_LOCATOR}    $ {SUBJECTS}
     Press Keys    ${SUBJECTS_LOCATOR}    RETURN
     
 Select Hobbies
@@ -103,6 +103,7 @@ Select State And City
     Click Element    xpath=//div[text()="${CITY}"]
      
 Click on Submit button
+    Scroll Element To Center    ${SUBMIT_BUTTON}
     Click Button    ${SUBMIT_BUTTON}
  
 Verify the submit form full fill
@@ -117,8 +118,7 @@ Verify the submit form full fill
     Table should contain inputed Subjects    ${SUBJECTS}
     Table should contain inputed Hobbies    @{HOBBY}
     Table should contain inputed Address     ${ADDRESS}
-    Table should contain inputed Stage & City    ${STAGE_CITY}   
-     
+    Table should contain inputed Stage & City    ${STAGE_CITY}     
     
 Table should contain inputed Submit Tilte
     [Arguments]    ${SUBMIT_TITLE}
@@ -162,4 +162,51 @@ Table should contain inputed Address
 
 Table should contain inputed Stage & City
     [Arguments]    ${STAGE_CITY}
-    Page Should Contain    ${STAGE_CITY}    
+    Page Should Contain    ${STAGE_CITY}   
+
+# TEST 2 - LEAVE THE REQUIRED FIELDS AS BLANK
+
+# Verify the required fields in red
+#     Missing Firstname
+#     Missing Lastname
+#     Missing Gender
+#     Missing Mobile
+# Get border color by ID
+#     [Arguments]    ${elementID}
+#     ${BORDER_COLOR}=    Execute JavaScript    return window.getComputedStyle(document.getElementById('${elementID}')).getPropertyValue('border-color');
+#     Log    The border color: ${BORDER_COLOR}
+#     RETURN    ${BORDER_COLOR}
+
+# Missing Firstname
+#     #${Fristname_border}=    Execute JavaScript    return window.getComputedStyle(document.getElementById('firstName')).getPropertyValue('border-color');
+#     ${Fristname_border}=    Get border color by ID    firstName
+#     Log    First name border color: ${Fristname_border}
+#     Should Contain    ${Fristname_border}    rgb(220, 53, 69)
+
+# Missing Lastname
+#     ${Lastname_border}=    Get border color by ID    lastName
+#     Log    Last name border color: ${Lastname_border}
+#     Should Contain    ${Lastname_border}    rgb(220, 53, 69)   
+
+# Missing Mobile
+#     ${Mobile_border}=    Get border color by ID    userNumber
+#     Log    Mobile border color: ${Mobile_border}
+#     Should Contain    ${Mobile_border}    rgb(220, 53, 69)  
+
+Verify the required fields will show in red
+    @{required_fields}=    Create List    firstName    lastName    userNumber            
+        FOR    ${id}    IN    @{required_fields}
+            ${border_color}=    Execute JavaScript    return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color');
+            Log    Gender color: ${border_color}
+            Should Be Equal As Strings    ${border_color}    rgb(220, 53, 69)
+        END
+Verify the required radios will show in red
+    @{gender_labels}=    Create List
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label
+    ...    genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label
+    FOR    ${label_selector}    IN    @{gender_labels}
+        ${Gender_color}=    Execute Javascript    return window.getComputedStyle(document.querySelector('#${label_selector}')).getPropertyValue('color')
+        Log    Gender color: ${Gender_color}
+        Should Be Equal As Strings    ${Gender_color}    rgb(220, 53, 69)
+    END

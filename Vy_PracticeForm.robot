@@ -36,9 +36,17 @@ Open Web Browser and input valid data to submit
     Input Address    ${ADDRESS}
     Select State And City    ${STATE}    ${CITY}
     Click on Submit button
-    Verify the submit form full fill    ${SUBMIT_TITLE}    ${FIRSTNAME}    ${LASTNAME}    ${EMAIL}    ${GENDER}    ${MOBILE}    ${DOB}    ${SUBJECTS}    ${ADDRESS}    ${STAGE_CITY}    @{HOBBY}
+    Verify the submit form full fill    ${SUBMIT_TITLE}    ${ADDRESS}    ${STAGE_CITY}    ${FIRSTNAME}    ${LASTNAME}    ${EMAIL}    ${GENDER}    ${MOBILE}    ${DOB}    ${SUBJECTS}    @{HOBBY}
     Sleep    5s
     Close Window
+
+Open Web Browser and leave the require fields as blank to submit
+    Open Chrome Browser
+    Maximize Browser Window
+    Click on Submit button
+    Sleep    5s
+    Verify the required fields will show in red
+    Verify the required radios will show in red
 
 
     
