@@ -177,3 +177,24 @@ Verify submit successful
     Table should contain picture
     Table should contain Address
     Table should contain state and city 
+
+Verify that the required fields will be red-highlighted
+    @{fields}=    Create List    firstName    lastName    userNumber    
+    FOR    ${id}    IN    @{fields}
+        ${border}=    Execute Javascript    return window.getComputedStyle(document.querySelector('#${id}')).getPropertyValue('border-color')
+        Log    Border Color: ${border}
+        Should Be Equal As Strings    ${border}    rgb(220, 53, 69)
+        Sleep    0.5s
+    END
+
+
+Verify that the required radios will be red-highlighted
+    @{gender_labels}=    Create List
+    ...    "#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label"
+    ...    "#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label"
+    ...    "#genterWrapper > div.col-md-9.col-sm-12 > div:nth-child(3) > label"
+    FOR    ${label_selector}    IN    @{gender_labels}
+        ${color}=    Execute Javascript    return window.getComputedStyle(document.querySelector(${label_selector})).getPropertyValue("color")
+        Log    Label color for ${label_selector}: ${color}
+        Should Be Equal As Strings    ${color}    rgb(220, 53, 69)
+    END
