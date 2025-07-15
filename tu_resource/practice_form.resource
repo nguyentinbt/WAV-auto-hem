@@ -3,25 +3,41 @@ Library    SeleniumLibrary
 Library    OperatingSystem
 
 *** Variables ***
-${DEMOQA_URL}    https://demoqa.com/automation-practice-form
-${FIRST_NAME_FIELD}    //*[@id="firstName"]
-${LAST_NAME_FIELD}    //*[@id="lastName"]
-${EMAIL_FIELD}    //*[@id="userEmail"]
-${FEMALE_GENDER_OPTION}    //label[contains(text(), 'Female')]
-${MOBILE_FIELD}    //*[@id="userNumber"]
-${DATE_OF_BIRTH_FIELD}    //*[@id="dateOfBirthInput"]
-${SUBJECT_FIELD}    //*[@id="subjectsInput"]
-${MUSIC_HOBBIES_OPTION}    //label[contains(text(), 'Music')]
-${UPLOAD_PICTURE_BUTTON}    //*[@id="uploadPicture"]
-${CURRENT_ADDRESS_FIELD}    //*[@id="currentAddress"]
-${SELECT_STATE_DROPDOWN}    //*[@id="state"]
-${SELECT_CITY_DROPDOWN}    //*[@id="city"]
-${SUBMIT_BUTTON}    //*[@id="submit"]
-${DATE}       //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[3]
-${MONTH}      June
-${YEAR}       2025
-${LAST_PAGE_ELEMENT}    //*[@id="app"]/div/div/div/div[2]/div[3]
+# ${DEMOQA_URL}    https://demoqa.com/automation-practice-form
+# ${FIRST_NAME_FIELD}    //*[@id="firstName"]
+# ${LAST_NAME_FIELD}    //*[@id="lastName"]
+# ${EMAIL_FIELD}    //*[@id="userEmail"]
+# ${FEMALE_GENDER_OPTION}    //label[contains(text(), 'Female')]
+# ${MOBILE_FIELD}    //*[@id="userNumber"]
+# ${DATE_OF_BIRTH_FIELD}    //*[@id="dateOfBirthInput"]
+# ${SUBJECT_FIELD}    //*[@id="subjectsInput"]
+# ${MUSIC_HOBBIES_OPTION}    //label[contains(text(), 'Music')]
+# ${UPLOAD_PICTURE_BUTTON}    //*[@id="uploadPicture"]
+# ${CURRENT_ADDRESS_FIELD}    //*[@id="currentAddress"]
+# ${SELECT_STATE_DROPDOWN}    //*[@id="state"]
+# ${SELECT_CITY_DROPDOWN}    //*[@id="city"]
+# ${SUBMIT_BUTTON}    //*[@id="submit"]
+# ${DATE}       //*[@id="dateOfBirth"]/div[2]/div[2]/div/div/div[2]/div[2]/div[2]/div[3]
+# ${MONTH}      June
+# ${YEAR}       2025
+# ${LAST_PAGE_ELEMENT}    //*[@id="app"]/div/div/div/div[2]/div[3]
 
+${DEMOQA_URL}    https://demoqa.com/automation-practice-form
+${FIRST_NAME_FIELD}    css:#firstName
+${LAST_NAME_FIELD}    css:#lastName
+${EMAIL_FIELD}    css:#userEmail
+${FEMALE_GENDER_OPTION}    css:label[for="gender-radio-2"]
+${MOBILE_FIELD}    css:#userNumber
+${DATE_OF_BIRTH_FIELD}    css:#dateOfBirthInput
+${SUBJECT_FIELD}    css:#subjectsInput
+${MUSIC_HOBBIES_OPTION}    css:label[for="hobbies-checkbox-3"]
+${UPLOAD_PICTURE_BUTTON}    css:#uploadPicture
+${CURRENT_ADDRESS_FIELD}    css:#currentAddress
+${SELECT_STATE_DROPDOWN}    css:#state
+${SELECT_CITY_DROPDOWN}    css:#city
+${SUBMIT_BUTTON}    css:#submit
+${DATE}       css:.react-datepicker__day.react-datepicker__day--010
+${LAST_PAGE_ELEMENT}    css:#app > div > div > div > div.col-12.mt-4.col-md-6 > div:nth-child(3)
 
 *** Keywords ***
 Open Practice Form
@@ -91,8 +107,10 @@ Select City
 Select Date
     [Documentation]    Select Date From Custom Calendar
     Click Element    ${DATE_OF_BIRTH_FIELD}
-    Click Element    //select[@class='react-datepicker__month-select']//option[text()='${MONTH}']
-    Click Element    //select[@class='react-datepicker__year-select']//option[text()='${YEAR}']
+    # Click Element    //select[@class='react-datepicker__month-select']//option[text()='${MONTH}']
+    # Click Element    //select[@class='react-datepicker__year-select']//option[text()='${YEAR}']
+    Click Element    css:select.react-datepicker__month-select option[value="5"]
+    Click Element    css:select.react-datepicker__year-select option[value="2025"]
     Click Element    ${DATE}
 
 Submit Practice Form
