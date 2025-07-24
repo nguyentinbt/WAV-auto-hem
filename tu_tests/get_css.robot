@@ -1,5 +1,5 @@
 *** Settings ***
-Library           SeleniumLibrary
+Resource            ../configurations/configs.resource
 
 *** Test Cases ***
 Get CSS Selector On contact Us Form
