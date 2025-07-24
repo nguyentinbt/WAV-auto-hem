@@ -1,7 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    Collections
-Resource    ../tu_resource/practice_form.resource
+Resource            ../configurations/configs.resource
 
 
 *** Test Cases ***

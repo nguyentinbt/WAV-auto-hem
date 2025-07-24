@@ -1,6 +1,6 @@
 *** Settings ***
+# Library
 Library    SeleniumLibrary
-Resource    ../tu_tests/tu_test_on_browser.robot
 
 *** Variables ***
 ${URL}    https://the-internet.herokuapp.com/login
